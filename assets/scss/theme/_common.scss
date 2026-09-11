@@ -1,0 +1,120 @@
+@use '../utils' as *;
+/*---------------------------------
+    1.2 Common Classes
+---------------------------------*/
+
+.w-img{
+	& img{
+		width: 100%;
+	}
+}
+
+.m-img{
+	& img{
+		max-width: 100%;
+	}
+}
+
+.fix {
+    overflow:hidden
+}
+.clear{
+    clear: both;
+}
+
+.overflow-y-visible{
+	overflow-x: hidden;
+	overflow-y: visible;
+}
+.tp-fix{
+	overflow-x: hidden;
+}
+
+.p-relative{
+	position: relative;
+}
+.p-absolute{
+	position: absolute;
+}
+.p-inherit{
+	position: inherit!important;
+}
+.bg-position{
+	@include background();
+}
+.common-underline{
+	@include bgborder(currentColor, 0,0);
+	@include transition(all .4s ease);
+	&:hover{
+		@include bgborder(currentColor, 0,100%);
+		@include transition(all .4s ease);
+	}
+}
+.tp-transparent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 3;
+}
+.slide-transtion {
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+
+// custom-container-here
+$container:(1800,1876,1350);
+
+@each $number in $container{
+  @media (min-width:1400px) {
+    .container-#{$number}{
+      max-width: #{$number}px;
+    }
+  }
+}
+
+/* Font weight */
+$font-weight: 100;
+@while $font-weight < 1000 {
+  .fw-#{$font-weight} {
+    font-weight: (#{$font-weight});
+  }
+  $font-weight: $font-weight + 100;
+}
+
+// tp-font-famely-variables
+@each $font, $famely in $font-family {
+  @each $key, $value in $famely{
+    .tp-#{$font}-#{$key} {
+      font-family: var(--tp-#{$font}-#{$key});
+    }
+  }
+}
+
+.hover-thumb-wrap{
+  &:hover{
+    & .hover-thumb{
+      &::after {
+        height: 250%;
+        transition: all 600ms linear;
+        background-color: transparent;
+      }
+    }
+  }
+  & .hover-thumb{
+    position: relative;
+    overflow: hidden;
+    &::after {
+      position: absolute;
+      width: 200%;
+      height: 0%;
+      left: 50%;
+      top: 50%;
+      background-color: rgba(255, 255, 255, 0.3);
+      transform: translate(-50%, -50%) rotate(-45deg);
+      content: "";
+      z-index: 1;
+    }
+  }
+}
