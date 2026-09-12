@@ -2,9 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home2/fahadtra/public_html/
-    - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp about.html $DEPLOYPATH
-    - /bin/cp tours.html $DEPLOYPATH
-    - /bin/cp -R css $DEPLOYPATH
-    - /bin/cp -R js $DEPLOYPATH
-    - /bin/cp -R images $DEPLOYPATH
+    - /bin/cp -R *.html $DEPLOYPATH
+    - /bin/cp -R assets $DEPLOYPATH
