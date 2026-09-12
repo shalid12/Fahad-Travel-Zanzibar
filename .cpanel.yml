@@ -1,7 +1,10 @@
 ---
 deployment:
- tasks:
- - export DEPLOYPATH=/home/user/public_html/
- - /bin/cp index.html $DEPLOYPATH
- - /bin/cp style.css $DEPLOYPATH
- 
+  tasks:
+    - export DEPLOYPATH=/home2/fahadtra/public_html/
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp about.html $DEPLOYPATH
+    - /bin/cp tours.html $DEPLOYPATH
+    - /bin/cp -R css $DEPLOYPATH
+    - /bin/cp -R js $DEPLOYPATH
+    - /bin/cp -R images $DEPLOYPATH
