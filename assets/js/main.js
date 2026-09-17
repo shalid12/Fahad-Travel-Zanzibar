@@ -176,6 +176,9 @@
     gallery: {
       enabled: true,
     },
+    fixedContentPos: true,
+    fixedBgPos: true,
+    overflowY: "hidden",
   });
 
   $(".popup-video").magnificPopup({
