@@ -187,6 +187,22 @@
     overflowY: "hidden",
   });
 
+  let tourDetailGallery = $(".tp-tour-detail-image");
+  tourDetailGallery.magnificPopup({
+    type: "image",
+    gallery: {
+      enabled: true,
+    },
+    fixedContentPos: true,
+    fixedBgPos: true,
+    overflowY: "hidden",
+  });
+
+  $(".tp-tour-gallery-view-all").on("click", function (event) {
+    event.preventDefault();
+    tourDetailGallery.first().trigger("click");
+  });
+
   $(".popup-video").magnificPopup({
     type: "iframe",
   });
