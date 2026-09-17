@@ -2939,9 +2939,9 @@ input[type="color"] {
   width: 44px;
   border: 1px solid rgba(7, 21, 22, 0.1);
   border-radius: 100%;
-  display: inline-block;
-  text-align: center;
-  line-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-right: 2px;
   color: var(--tp-common-black);
 }
@@ -6500,6 +6500,26 @@ td.today.active.start-date.active.end-date.available {
 .tp-tour-gallery-thumb.gallery-col-1 {
   margin-right: -20px;
 }
+.tp-tour-gallery-thumb .tp-tour-media-meta-mobile {
+  display: none;
+}
+@media (max-width: 574.98px) {
+  .tp-tour-gallery-thumb .tp-tour-media-meta-mobile {
+    display: block;
+    left: auto;
+    right: 16px;
+    bottom: 16px;
+  }
+  .tp-tour-gallery-thumb .tp-tour-media-meta-mobile a {
+    width: auto;
+    height: auto;
+    padding: 7px 22px;
+    border-radius: 34px;
+  }
+  .tp-tour-gallery-thumb .tp-tour-media-meta-mobile a i {
+    margin-right: 8px;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 991px),
   only screen and (min-width: 576px) and (max-width: 767px),
   (max-width: 574.98px) {
@@ -7857,6 +7877,11 @@ td.today.active.start-date.active.end-date.available {
 .tp-tour-details-3-gallery-wrap .tp-tour-gallery-thumb.gallery-col-1 {
   margin-right: 45px;
 }
+@media (max-width: 574.98px) {
+  .tp-tour-details-3-gallery-wrap .tp-tour-gallery-inner {
+    display: none;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 991px),
   only screen and (min-width: 576px) and (max-width: 767px),
   (max-width: 574.98px) {
@@ -8120,7 +8145,6 @@ td.today.active.start-date.active.end-date.available {
   }
 }
 .tp-tour-activity-content ul li {
-  font-weight: 
   font-size: 18px;
   color: var(--tp-common-black);
   list-style: none;
