@@ -63,7 +63,13 @@
   let tpSideMenuToggle = $("button.tp-sidemenu-close");
 
   $(tpSideMenuToggle).on("click", function () {
-    $(this).siblings(".sub-menu").slideToggle();
+    $(this).siblings(".sub-menu").stop(true, true).slideToggle();
+    $(this).parent().toggleClass("active");
+  });
+
+  $(tpOffcanvasMenu).on("click", "li.has-dropdown > a", function (event) {
+    event.preventDefault();
+    $(this).siblings(".sub-menu").stop(true, true).slideToggle();
     $(this).parent().toggleClass("active");
   });
 
