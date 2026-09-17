@@ -6519,6 +6519,9 @@ td.today.active.start-date.active.end-date.available {
   .tp-tour-gallery-thumb .tp-tour-media-meta-mobile a i {
     margin-right: 8px;
   }
+  .tp-tour-gallery-thumb .tp-tour-media-meta-mobile a svg {
+    margin-right: 8px;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px),
   only screen and (min-width: 576px) and (max-width: 767px),
