@@ -20,6 +20,36 @@
 
   ////////////////////////////////////////////////////
   // Mobile menu
+  var currentPage = window.location.pathname.split("/").filter(Boolean).pop() || "index";
+  currentPage = currentPage.replace(/\.html?$/i, "");
+
+  var infoPages = [
+    "about", "airport", "faqs", "terms", "best-time-to-visit-zanzibar",
+    "things-to-know-about-zanzibar", "travel-tour-guides-tips", "tours-safari-packages"
+  ];
+  var currentSection = currentPage === "index" ? "Home" :
+    currentPage === "contact" ? "Contact" :
+    infoPages.indexOf(currentPage) !== -1 ? "Pages" :
+    currentPage.indexOf("tanzania-") === 0 || /-safari$/.test(currentPage) ?
+      "Tanzania Safaris" : "Zanzibar Tours";
+
+  var primaryMenu = $(".tp-mobile-menu-active > ul");
+  primaryMenu.find(".active").removeClass("active");
+  primaryMenu.children("li").each(function () {
+    var link = $(this).children("a").first();
+    if ($.trim(link.text()) === currentSection) {
+      $(this).addClass("current-menu-item");
+    }
+  });
+  primaryMenu.find("a[href]").each(function () {
+    var href = $(this).attr("href");
+    if (!href || href === "#") return;
+    var linkedPage = href.split("?")[0].split("/").filter(Boolean).pop() || "index";
+    if (linkedPage.replace(/\.html?$/i, "") === currentPage) {
+      $(this).attr("aria-current", "page").parent().addClass("current-menu-item");
+    }
+  });
+
   let tpMenuHTML = $(".tp-mobile-menu-active > ul").clone();
   let tpOffcanvasMenu = $(".tp-offcanvas-menu > nav");
 

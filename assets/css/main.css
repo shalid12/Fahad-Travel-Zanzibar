@@ -32,13 +32,11 @@
 		2.9 Search css start
 		2.10 Section Title
 
-
 	-----------------
     03. HEADER CSS
 	-----------------
 		3.1 Header Style
 		3.2 Header Style
-
 
     ---------------------------------
 	04. MENU CSS
@@ -60,7 +58,6 @@
 	06. FOOTER CSS
 	---------------------------------
 		6.1 Footer Style
-
 
 	---------------------------------
 	07. PAGES CSS
@@ -98,8 +95,6 @@
 		7.31 tour details css start
 		7.32 tour css start
 		7.33 video
-
-
 
 **********************************************/
 /*----------------------------------------*/
@@ -2909,6 +2904,30 @@ input[type="color"] {
 .tp-offcanvas-menu ul li.active > a {
   color: var(--tp-theme-1);
 }
+.tp-main-menu > nav > ul > li.current-menu-item > a {
+  color: #b8500c !important;
+  background: rgba(184, 80, 12, .09);
+  border-radius: 7px;
+  padding: 12px 10px !important;
+  margin: 11px -10px;
+  font-weight: 700;
+}
+.tp-main-menu > nav > ul > li.current-menu-item.has-dropdown > a::after {
+  right: 10px;
+}
+.tp-main-menu > nav > ul > li.current-menu-item.has-dropdown > a {
+  padding-right: 30px !important;
+  margin-right: -30px;
+}
+.tp-main-menu .sub-menu a[aria-current="page"] {
+  color: #b8500c !important;
+  font-weight: 700;
+}
+.tp-offcanvas-menu > nav > ul > li.current-menu-item > a,
+.tp-offcanvas-menu a[aria-current="page"] {
+  color: #b8500c;
+  font-weight: 700;
+}
 .tp-offcanvas-menu ul li.active > button.tp-sidemenu-close svg {
   transform: rotate(90deg);
 }
@@ -2942,7 +2961,7 @@ input[type="color"] {
 .tp-offcanvas {
   position: fixed;
   right: 0;
-  z-index: 99;
+  z-index: 1002;
   top: 0;
   width: 400px;
   background: var(--tp-common-white);
@@ -2975,10 +2994,9 @@ input[type="color"] {
 }
 .tp-offcanvas-overlay {
   position: fixed;
-  height: 100%;
-  width: 100%;
+  inset: 0;
   background: #000;
-  z-index: 15;
+  z-index: 1001;
   opacity: 0;
   transition: 0.3s;
   visibility: hidden;
