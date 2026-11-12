@@ -66,7 +66,7 @@ body.site-theme {
 
 /* Inner-page introduction and content surfaces. Existing photography is retained. */
 .site-theme .tp-breadcrumb-area { position: relative; overflow: hidden; }
-.site-theme .tp-breadcrumb-overly::before { background: rgba(10,45,104,.56); }
+.site-theme .tp-breadcrumb-overly::before { background: rgba(10,45,104,.30); }
 .site-theme .tp-breadcrumb-title { font-size: clamp(44px, 5.5vw, 76px) !important; line-height: 1.1; }
 .site-theme .tp-breadcrumb-subtitle { font-family: "Onest", Arial, sans-serif; letter-spacing: .08em; }
 .site-theme main { background: #f7f8f4; }
@@ -381,7 +381,7 @@ body.site-theme {
 .contact-theme .tp-contact-form .tp-review-input .tp-input:focus { border-color: #b8500c; }
 .contact-theme .tp-contact-map { padding-bottom: 90px; }
 .contact-theme .tp-breadcrumb-ptb { padding: 105px 0 112px; }
-.contact-theme .tp-breadcrumb-overly::before { background: linear-gradient(90deg, rgba(10,45,104,.82), rgba(10,45,104,.53)); }
+.contact-theme .tp-breadcrumb-overly::before { background: linear-gradient(90deg, rgba(10,45,104,.46), rgba(10,45,104,.28)); }
 .contact-hero-content { max-width: 850px; margin: 0 auto; }
 .contact-hero-kicker { color: #f6c65a; font-size: 11px; font-weight: 700; letter-spacing: .18em; }
 .contact-theme .contact-hero-content .tp-breadcrumb-title { margin: 17px 0 !important; color: #fffaf1; font-size: clamp(46px, 6vw, 78px) !important; }
