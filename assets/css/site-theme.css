@@ -400,9 +400,18 @@ body.site-theme {
 .contact-planning-note ul { margin: 0; padding-left: 19px; color: #51657b; font-size: 14px; line-height: 1.75; }
 .contact-form-intro { margin-bottom: 22px; font-size: 14px; }
 .contact-theme .tp-contact-form .tp-review-input .tp-input { width: 100%; }
-.contact-theme .tp-contact-form .tp-review-input .contact-select { appearance: auto; color: #0a2d68; }
+.contact-interest-groups { display: grid; gap: 14px; }
+.contact-interest-group { min-width: 0; margin: 0; padding: 15px 16px; border: 1px solid #d9e5f0; border-radius: 6px; }
+.contact-interest-group legend { float: none; width: auto; margin: 0 0 10px; padding: 0; color: #0a2d68; font-size: 14px; font-weight: 700; }
+.contact-interest-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 9px 16px; }
+.contact-interest-options label { display: flex; align-items: flex-start; gap: 9px; margin: 0; color: #51657b; font-size: 13px; line-height: 1.5; cursor: pointer; }
+.contact-interest-options input { flex: none; width: 16px; height: 16px; margin: 2px 0 0; accent-color: #b8500c; }
+#trip-interest-hint { display: block; margin-top: 9px; color: #51657b; font-size: 12px; }
 .contact-theme .tp-contact-form .tp-review-input .tp-textarea { min-height: 128px; padding-top: 16px; }
+.contact-form-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .contact-theme .tp-contact-form-btn .tp-btn { display: flex; align-items: center; justify-content: center; gap: 11px; }
+.contact-theme .tp-contact-form-btn .contact-email-submit { border-color: #0a2d68; background: #0a2d68; color: #fff; }
+.contact-theme .tp-contact-form-btn .contact-email-submit:hover { border-color: #b8500c; background: #b8500c; color: #fff; }
 .contact-submit-icon { display: block; width: 18px; height: 18px; }
 .contact-form-note { margin: 13px 0 0; color: #51657b; font-size: 12px; line-height: 1.6; }
 .contact-form-note a { color: #a7440a; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
@@ -411,6 +420,10 @@ body.site-theme {
 .contact-map-intro p { max-width: 560px; margin: 0; }
 .contact-map-intro > a { flex: none; color: #a7440a; font-size: 14px; font-weight: 700; border-bottom: 1px solid #a7440a; }
 .contact-theme .tp-contact-map-box iframe { height: 420px; filter: saturate(.65); }
+
+@media (max-width: 575px) {
+    .contact-form-actions { grid-template-columns: 1fr; }
+}
 
 @media (min-width: 1200px) {
   .site-theme .tp-menu-dropdown nav ul li:focus-within > .sub-menu { opacity: 1; visibility: visible; transform: translateY(0); }
