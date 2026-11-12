@@ -2,5 +2,9 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home2/fahadtra/public_html/
-    - /bin/cp -R *.html $DEPLOYPATH
+    - find . -maxdepth 1 -type f -name "*.html" -exec /bin/cp {} $DEPLOYPATH \;
     - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp -R css $DEPLOYPATH
+    - /bin/cp -R img $DEPLOYPATH
+    - /bin/cp -R js $DEPLOYPATH
+    - /bin/cp .htaccess $DEPLOYPATH
